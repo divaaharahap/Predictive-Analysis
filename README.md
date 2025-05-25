@@ -1,10 +1,5 @@
 # MLT Proyek Pertama | Predictive Analysis Project: Regresi untuk Memprediksi Skor Kecanduan Media Sosial pada Siswa
-
----
-
-###### Disusun oleh : Diva Anggreini Harahap
-
----
+##### Disusun oleh : Diva Anggreini Harahap
 
 ## 1. Domain Proyek
 Media sosial telah menjadi bagian essensial dari kehidupan sehari-hari terutama bagi remaja dan mahasiswa. Namun, penggunaan media sosial yang berlebihan berpotensi menyebabkan kecanduan yang dapat berdampak negatif pada kesehatan mental, hubungan sosial, dan performa akademik pengguna. Penelitian oleh Sahranç dan Urhun (2021) menyelidiki hubungan antara kecanduan media sosial dan regulasi diri pada mahasiswa. Hasil penelitiaan tersebut menunjukkan bahwa regulasi diri mampu memprediksi tingkat kecanduan media sosial dengan model regresi yang menjelaskan 17% variansi dalam kecanduan tersebut.
@@ -46,16 +41,7 @@ Feature importance memberikan wawasan yang kritis untuk memahami masing-masing f
 - Dataset didapat dari Kaggle.
 - Link : https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships
 - Berisi perilaku media sosial siswa dan hasil terkait dalam kehidupan mereka. Dataset ini mencakup beberapa negara dan tingkatan akademik, dengan fokus pada dimensi utama seperti intensitas penggunaan, preferensi platform dan dinamika hubungan. Setiap baris merepresentasikan jawaban satu siswa dalam survei, memberikan gambaran potong lintang yang cocok untuk analisis statistik.
-- Sampel Data:
-| Index | Student_ID | Age | Gender | Academic_Level | Country    | Avg_Daily_Usage_Hours | Most_Used_Platform | Affects_Academic_Performance | Sleep_Hours_Per_Night | Mental_Health_Score | Relationship_Status | Conflicts_Over_Social_Media | Addicted_Score |
-|-------|------------|-----|--------|----------------|------------|----------------------|-------------------|------------------------------|----------------------|--------------------|---------------------|----------------------------|----------------|
-| 0     | 1          | 19  | Female | Undergraduate  | Bangladesh | 5.2                  | Instagram         | Yes                          | 6.5                  | 6                  | In Relationship      | 3                          | 8              |
-| 1     | 2          | 22  | Male   | Graduate       | India      | 2.1                  | Twitter           | No                           | 7.5                  | 8                  | Single               | 0                          | 3              |
-| 2     | 3          | 20  | Female | Undergraduate  | USA        | 6.0                  | TikTok            | Yes                          | 5.0                  | 5                  | Complicated          | 4                          | 9              |
-| 3     | 4          | 18  | Male   | High School    | UK         | 3.0                  | YouTube           | No                           | 7.0                  | 7                  | Single               | 1                          | 4              |
-| 4     | 5          | 21  | Male   | Graduate       | Canada     | 4.5                  | Facebook          | Yes                          | 6.0                  | 6                  | In Relationship      | 2                          | 7              |
-
-
+  
 ### Variabel-Variabel pada dataset:
 - Student ID : Identifier unik responden
 - Age : Usia (tahun)

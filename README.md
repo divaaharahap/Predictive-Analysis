@@ -58,63 +58,59 @@ Feature importance memberikan wawasan yang kritis untuk memahami masing-masing f
 - Addicted_Score : skor kecanduan media sosial
 
 ### Exploratory Data Analysis
-- Visualisasi Distribusi Data
-Menggunakan histogram dan boxplot untuk melihat sebara nilai pada setiap fitur numerik sekaligus mendeteksi adanya outlier atau nilai ekstrim yang dapat mempengaruhi hasil model.
+- Visualisasi Distribusi Data <br>
+Menggunakan histogram dan boxplot untuk melihat sebara nilai pada setiap fitur numerik sekaligus mendeteksi adanya outlier atau nilai ekstrim yang dapat mempengaruhi hasil model. <br>
 ![histogram dan boxplot untuk fitur numerik](image.png)
 
-- Analisis Korelasi Antar Fitur
-Membuat correlation matrix dan heatmap untuk mengidentifikasi hubungan linear antar variabel numerik, khususnya untuk memahami fitur mana yang memiliki korelasi signifikan dengan target variabel skor kecanduan.
+- Analisis Korelasi Antar Fitur <br>
+Membuat correlation matrix dan heatmap untuk mengidentifikasi hubungan linear antar variabel numerik, khususnya untuk memahami fitur mana yang memiliki korelasi signifikan dengan target variabel skor kecanduan. <br>
 ![heatmap untuk hubungan linear antar variabel numerik](image-1.png)
 
-- Visualisasi Kategori dan Fitur Kualitatif
-Menggunakan bar chart untuk melihat distribusi nilai fitur kategorikal.
+- Visualisasi Kategori dan Fitur Kualitatif <br>
+Menggunakan bar chart untuk melihat distribusi nilai fitur kategorikal.<br>
 ![Media sosial yang paling sering digunakan](image-2.png)
 ![Penyebaran tingkatan pendidikan](image-3.png)
 ![Penyebaran pengaruh ke kualitas pendidikan](image-4.png)
 
 - Deteksi Missing Values dan Data Duplikat
-Melakukan pengecekan dan pembersihan data untuk memastikan kualitas dataset, sehingga model yang dibangun dapat lebih akurat dan tidak bias
+Melakukan pengecekan dan pembersihan data untuk memastikan kualitas dataset, sehingga model yang dibangun dapat lebih akurat dan tidak bias <br>
 ![Missing Values](image-5.png)
 ![Data duplikat](image-6.png)
 
 ## 4. Data Preparation
-- Menghapus data duplikat dan nilai yang hilang.
+- Menghapus data duplikat dan nilai yang hilang.<br>
 Data yang duplikat dapat menyebabkan model belajar dari data yang sama berulang-ulang, sehingga menghasilkan bias dan mengurangi kualitas prediksi. Nilang yang hilang juga dapat mengganggu proses pelatihan model akrena sebagian besar algoritma membutuhkan data lengkap. Karena dataset sudah bersih dari missing values dan data yang duplikat, kita tidak akan melakukan penanganan missing values dan data duplikat. Tapi, kalau dataset banyak missing values dan duplicated data, kita harus menghapus data yang duplikat dan mengatasi missing values (imputasi atau penghapusan) agar dataset menjadi bersih dan siap untuk dianalisis.
 
-- Melakukan encoding kategori dengan Label Encoding
-Algoritma machine learning hanya menerima input numerik. Oleh karena itu, fitur kategorikal harus diubah menjadi angka menggunakan Label Encoding, yang mengganti setiap kategori dengan angka unik. Contohnya :
+- Melakukan encoding kategori dengan Label Encoding<br>
+Algoritma machine learning hanya menerima input numerik. Oleh karena itu, fitur kategorikal harus diubah menjadi angka menggunakan Label Encoding, yang mengganti setiap kategori dengan angka unik. Contohnya :<br>
 ![Label Encoding](image-7.png)
 
-- Melakukan standarisasi fitur numerik menggunakan StandardScaler
-Fitur numerik memiliki skala yang berbeda-beda. Standarisasi mengubah semua fitur menjadi memiliki mean 0 dan standar deviasi 1, agar model tidak bias ke fitur dengan rentang nilai besar dan mempercepat proses konvergensi dalam pelatihan.
+- Melakukan standarisasi fitur numerik menggunakan StandardScaler<br>
+Fitur numerik memiliki skala yang berbeda-beda. Standarisasi mengubah semua fitur menjadi memiliki mean 0 dan standar deviasi 1, agar model tidak bias ke fitur dengan rentang nilai besar dan mempercepat proses konvergensi dalam pelatihan.<br>
 ![StandardScaler](image-8.png)
 
-- Memisahkan data menjadi training (80%) dan testing (20%)
+- Memisahkan data menjadi training (80%) dan testing (20%)<br>
 Data dibagi menjadi dua bagian, data training untuk melatih model dan data testing untuk menguji performa model pada data yang belum pernah dilihat. Rasio 80:20 umum digunakan untuk memastikan model memiliki cukup data belajar sekaligus data validasi yang memadai, sehingga evaluasi hasil prediksi lebih objektif.
 
 ## 5. Modelling
 Pada proyek ini, digunakan dua algoritma machine learning untuk membangun prediksi skor kecanduan media sosial, yaitu **Random Forest Regressor** dan **K-Nearest Neighbors (KNN) Regressor**. Kedua algoritma ini dipilih untuk memberikan perbandingan antara model yang kompleks dna model yang sederhana.
 
 #### Tahapan Pemodelan 
-1. Random Forest Regressor
+1. Random Forest Regressor<br>
 Model ini menggunakan banyak pohon keputusan yang dibangun secara acak dan hasilnya digabungkan untuk memprediksi nilai target. Dengan parameter default dan random_state=42 untuk reproduktifitas, model ini efektif dalam menangkap pola hubungan kompleks antar fitur dan target tanpa perlu tuning parameter terlebih dahulu.
 
-2. K-Nearest Neighbors (KNN) Regressor
+2. K-Nearest Neighbors (KNN) Regressor<br>
 KNN memprediksi nilai target berdasarkan rata-rata nilai tetangga terdekat dalam ruang fitur. Kelebihan KNN adalah konsepnya yang sederhana dan mudah diimplementasikan, tetapi performanya bisa menurun saat dataset besar atau memiliki fitur berdimensi tinggi.
 - Parameter penting adalah jumlah tetangga k (n_neighbors), yang mempengaruhi bias dan varians model.
 
 #### Kelebihan dan Kekurangan
 | Algoritma     | Kelebihan                                                | Kekurangan                                                |
 | ------------- | -------------------------------------------------------- | --------------------------------------------------------- |
-| Random Forest | - Mampu menangkap pola non-linear dan interaksi kompleks | - Relatif lebih lambat dibanding model sederhana          |
-|               | - Tahan terhadap overfitting                             | - Kurang mudah diinterpretasi dibanding model linear      |
-| KNN Regressor | - Konsep sederhana dan intuitif                          | - Sensitif terhadap dimensi fitur dan skala data          |
-|               | - Tidak memerlukan pelatihan model eksplisit             | - Performa menurun dengan dataset besar atau noise tinggi |
+| Random Forest | Mampu menangkap pola non-linear dan interaksi kompleks | Relatif lebih lambat dibanding model sederhana          |
+|               | Tahan terhadap overfitting                             | Kurang mudah diinterpretasi dibanding model linear      |
+| KNN Regressor | Konsep sederhana dan intuitif                          | Sensitif terhadap dimensi fitur dan skala data          |
+|               | Tidak memerlukan pelatihan model eksplisit             | Performa menurun dengan dataset besar atau noise tinggi |
 
-## 6. Evaluation
-Berikut contoh penjelasan lengkap untuk bagian **Evaluation** yang bisa kamu pakai dalam laporan proyek regresi seperti prediksi skor kecanduan media sosial:
-
----
 
 ## 6. Evaluation
 
@@ -122,36 +118,33 @@ Berikut contoh penjelasan lengkap untuk bagian **Evaluation** yang bisa kamu pak
 
 Dalam proyek ini, metrik evaluasi yang digunakan untuk menilai performa model regresi adalah:
 
-* **Root Mean Squared Error (RMSE)**
-  RMSE adalah akar kuadrat dari rata-rata kuadrat selisih antara nilai prediksi dengan nilai aktual. Metrik ini mengukur besarnya error prediksi dalam satuan yang sama dengan target variabel, sehingga mudah diinterpretasikan. Nilai RMSE yang lebih kecil menandakan model dengan akurasi prediksi yang lebih tinggi.
+**Root Mean Squared Error (RMSE)**  
+RMSE adalah akar kuadrat dari rata-rata kuadrat selisih antara nilai prediksi dengan nilai aktual. Metrik ini mengukur besarnya error prediksi dalam satuan yang sama dengan target variabel. Nilai RMSE yang lebih kecil menandakan model dengan akurasi prediksi yang lebih tinggi.
 
-  Formula RMSE:
+_Rumus:_  
+RMSE = √( (1/n) × Σ (yᵢ - ŷᵢ)² )  
+di mana:  
+- yᵢ = nilai aktual  
+- ŷᵢ = nilai prediksi  
+- n = jumlah sampel
 
-  $$
-  RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
-  $$
+---
 
-  di mana $y_i$ adalah nilai aktual, $\hat{y}_i$ adalah nilai prediksi, dan $n$ adalah jumlah sampel.
+**Mean Absolute Error (MAE)**  
+MAE menghitung rata-rata nilai absolut selisih antara nilai aktual dan prediksi. Berbeda dengan RMSE, MAE memberikan bobot yang sama pada semua error tanpa memperbesar error besar. Nilai MAE yang rendah menunjukkan model yang prediksinya mendekati nilai sebenarnya.
 
-* **Mean Absolute Error (MAE)**
-  MAE menghitung rata-rata nilai absolut selisih antara nilai aktual dan prediksi. Berbeda dengan RMSE, MAE memberikan bobot yang sama pada semua error tanpa memperbesar error besar. Nilai MAE yang rendah menunjukkan model yang prediksinya mendekati nilai sebenarnya.
+_Rumus:_  
+MAE = (1/n) × Σ |yᵢ - ŷᵢ|
 
-  Formula MAE:
+---
 
-  $$
-  MAE = \frac{1}{n} \sum_{i=1}^n |y_i - \hat{y}_i|
-  $$
+**Koefisien Determinasi (R² Score)**  
+R² mengukur proporsi variansi data yang dapat dijelaskan oleh model. Nilai R² berkisar antara 0 sampai 1, dengan nilai mendekati 1 menunjukkan model yang sangat baik dalam menjelaskan variasi target.
 
-* **Koefisien Determinasi (R² Score)**
-  R² mengukur proporsi variansi data yang dapat dijelaskan oleh model. Nilai R² berkisar dari 0 hingga 1, dengan nilai mendekati 1 menunjukkan model yang sangat baik dalam menjelaskan variasi target.
-
-  Formula R²:
-
-  $$
-  R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}
-  $$
-
-  di mana $\bar{y}$ adalah rata-rata nilai aktual.
+_Rumus:_  
+R² = 1 - ( Σ (yᵢ - ŷᵢ)² ) / ( Σ (yᵢ - ȳ)² )  
+di mana:  
+- ȳ = rata-rata nilai aktual
 
 ---
 
@@ -173,7 +166,7 @@ Berikut learning curve sebagai visualisasi evaluasi performa model terkait kemam
 ![KNN Regressor](image-12.png)
 
 #### Visualisasi Hasil Prediksi vs Aktual
-Untuk memahami performa model secara visual, dilakukan plot hasil prediksi terhadap nilai aktual pada data testing. Grafik scatter plot ini menunjukkan seberapa dekat prediksi model dengan nilai sebenarnya.
+Untuk memahami performa model secara visual, dilakukan plot hasil prediksi terhadap nilai aktual pada data testing. Grafik scatter plot ini menunjukkan seberapa dekat prediksi model dengan nilai sebenarnya. <br>
 ![Hasil prediksi vs Aktual](image-9.png)
 - Titik yang berada di dekat garis diagonal (garis ideal) menandakan prediksi yang akurat.
 - Dari visualisasi, model Random Forest memperlihatkan sebaran titik yang lebih rapat ke garis ideal dibanding KNN, menegaskan performa yang lebih baik.

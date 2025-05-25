@@ -47,13 +47,13 @@ Feature importance memberikan wawasan yang kritis untuk memahami masing-masing f
 - Link : https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships
 - Berisi perilaku media sosial siswa dan hasil terkait dalam kehidupan mereka. Dataset ini mencakup beberapa negara dan tingkatan akademik, dengan fokus pada dimensi utama seperti intensitas penggunaan, preferensi platform dan dinamika hubungan. Setiap baris merepresentasikan jawaban satu siswa dalam survei, memberikan gambaran potong lintang yang cocok untuk analisis statistik.
 - Sampel Data:
-| Student_ID | Age | Gender | Academic_Level | Country    | Avg_Daily_Usage_Hours | Most_Used_Platform | Affects_Academic_Performance | Sleep_Hours_Per_Night | Mental_Health_Score | Relationship_Status | Conflicts_Over_Social_Media | Addicted_Score |
-|------------|-----|--------|----------------|------------|----------------------|-------------------|------------------------------|----------------------|--------------------|---------------------|----------------------------|----------------|
-| 1          | 19  | Female | Undergraduate  | Bangladesh | 5.2                  | Instagram         | Yes                          | 6.5                  | 6                  | In Relationship      | 3                          | 8              |
-| 2          | 22  | Male   | Graduate       | India      | 2.1                  | Twitter           | No                           | 7.5                  | 8                  | Single               | 0                          | 3              |
-| 3          | 20  | Female | Undergraduate  | USA        | 6.0                  | TikTok            | Yes                          | 5.0                  | 5                  | Complicated          | 4                          | 9              |
-| 4          | 18  | Male   | High School    | UK         | 3.0                  | YouTube           | No                           | 7.0                  | 7                  | Single               | 1                          | 4              |
-| 5          | 21  | Male   | Graduate       | Canada     | 4.5                  | Facebook          | Yes                          | 6.0                  | 6                  | In Relationship      | 2                          | 7              |
+| Index | Student_ID | Age | Gender | Academic_Level | Country    | Avg_Daily_Usage_Hours | Most_Used_Platform | Affects_Academic_Performance | Sleep_Hours_Per_Night | Mental_Health_Score | Relationship_Status | Conflicts_Over_Social_Media | Addicted_Score |
+|-------|------------|-----|--------|----------------|------------|----------------------|-------------------|------------------------------|----------------------|--------------------|---------------------|----------------------------|----------------|
+| 0     | 1          | 19  | Female | Undergraduate  | Bangladesh | 5.2                  | Instagram         | Yes                          | 6.5                  | 6                  | In Relationship      | 3                          | 8              |
+| 1     | 2          | 22  | Male   | Graduate       | India      | 2.1                  | Twitter           | No                           | 7.5                  | 8                  | Single               | 0                          | 3              |
+| 2     | 3          | 20  | Female | Undergraduate  | USA        | 6.0                  | TikTok            | Yes                          | 5.0                  | 5                  | Complicated          | 4                          | 9              |
+| 3     | 4          | 18  | Male   | High School    | UK         | 3.0                  | YouTube           | No                           | 7.0                  | 7                  | Single               | 1                          | 4              |
+| 4     | 5          | 21  | Male   | Graduate       | Canada     | 4.5                  | Facebook          | Yes                          | 6.0                  | 6                  | In Relationship      | 2                          | 7              |
 
 
 ### Variabel-Variabel pada dataset:

@@ -8,33 +8,33 @@ Proyek ini berfokus pada pengembangan model regresi prediktif yang mampu memproy
 
 ## 2. Business Understanding
 ### Problem Statements
-- Bagaimana cara memprediksi skor kecanduan media sosial menggunakan data survei mahasiswa?
+- Bagaimana cara memprediksi skor kecanduan media sosial menggunakan data survei mahasiswa?<br>
 Permasalahan utama adalah membangun model yang dapat memanfaatkan data survei seperti durasi penggunaan, kondisi mental, dan faktor sosial untuk secara akurat memprediksi tingkat kecanduan. Tantangannya adalah memilih teknik machine learning yang tepat dan mengolah data yang komplkes agar model dapat menangkap pola hubungan antar variabel.
 
-- Variabel mana yang paling berpengaruh dalam memengaruhi tingkat kecanduan?
+- Variabel mana yang paling berpengaruh dalam memengaruhi tingkat kecanduan? <br>
 Memahami faktor-faktor utama yang memengaruhi kecanduan penting agar intervensi dapat lebih fokus dan efektif. Identifikasi fitur signifikan membantu mengarahkan fokus perhatian pada aspek yang benar-benar berdampak besar, baik dari sisi pencegahan maupun penanganan.
 
-- Seberapa akurat model regresi yang dapat dikembangkan untuk prediksi ini?
+- Seberapa akurat model regresi yang dapat dikembangkan untuk prediksi ini? <br>
 Akurasi model sangat krusial agar hasil prediksi dapat diandalkan sebagai dasar pengambilan keputusan dan intervensi. Perlu dilakukan evaluasi yang tepat dengan metrik yang relevan agar dapat menilai seberapa baik model memprediksi data nyata.
 
 ### Goals
-- Membangun model regresi yang meminimalisir error prediksi.
+- Membangun model regresi yang meminimalisir error prediksi. <br>
 Tujuan utama adalah mendapatkan model yang dapat memberikan prediksi dengan tingkat kesalahan sekecil mungkin, sehingga hasilnya bisa dipercaya dan diimplementasikan dalam konteks nyata.
 
-- Mengidentifikasi fitur utama yang berkontribusi signifikan terhadap skor kecanduan.
+- Mengidentifikasi fitur utama yang berkontribusi signifikan terhadap skor kecanduan. <br>
 Dengan mengetahui fitur paling berpengaruh, intervensi dan program pencegahan dapat dirancang lebih terfokus dan efisien, serta membantu pemahaman ilmiah tentang kecanduan.
 
-- Menyediakan alat bantu prediktif untuk membantu intervensi dini di lingkungan pendidikan.
+- Menyediakan alat bantu prediktif untuk membantu intervensi dini di lingkungan pendidikan. <br>
 Model ini bukan hanya untuk riset, tetapi juga memiliki tujuan praktis memberikan solusi nyata dalam mengurangi dampak neatif kecanduan media sosial.
 
 ### Solution Statements
-- Implementasi model Random Forest Regressor dan K-Nearest Neighbor (KNN) Regressor sebagai baseline dan model kompleks.
+- Implementasi model Random Forest Regressor dan K-Nearest Neighbor (KNN) Regressor sebagai baseline dan model kompleks. <br>
 Pemilihan dua algoritma berbeda memberikan perbandingan performa antara model yang kompleks dan model sederhana. Random Forest efektif menangkap pola non-linear dan interaksi fitur, sedangkan KNN mudah dipahami dan sering menjadi baseline yang baik.
 
-- Melakukan evaluasi model menggunakan teknik cross-validation agar validasi performa lebih menyeluruh, serta menggunakan metrik RMSE, MAE, dan koefisien determinasi (R²) untuk mengukur akurasi model.
+- Melakukan evaluasi model menggunakan teknik cross-validation agar validasi performa lebih menyeluruh, serta menggunakan metrik RMSE, MAE, dan koefisien determinasi (R²) untuk mengukur akurasi model. <br>
 Cross-validation membantu memastikan model tidak overfit pada satu data training saja dan memberikan gambaran performa yang lebih stabil. Metrik RMSE dan MAE mengukur kesalahan prediksi dalam skala sebenarnya, sedangkan R2 menunjukkan seberapa besar variansi target yang dapat dijelaskan model.
 
-- Melakukan analisis fitur penting (feature importance) untuk mendapatkan insight terkait variabel-variabel yang paling memengaruhi tingkat kecanduan media sosial.
+- Melakukan analisis fitur penting (feature importance) untuk mendapatkan insight terkait variabel-variabel yang paling memengaruhi tingkat kecanduan media sosial. <br>
 Feature importance memberikan wawasan yang kritis untuk memahami masing-masing fitur dalam model, serta mendukung pengambilan keputusan berbasis data yang lebih baik.
 
 ## 3. Data Understanding
